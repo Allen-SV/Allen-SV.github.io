@@ -1,3 +1,5 @@
+/* BACKGROUND ANIMATION */
+
 const canvas=document.getElementById("bg");
 const ctx=canvas.getContext("2d");
 
@@ -65,6 +67,13 @@ window.addEventListener("resize",()=>{
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 });
+
+
+/* NAVBAR */
+function toggleMenu(){
+const menu = document.getElementById("nav-links");
+menu.classList.toggle("show");
+}
 
 
 /* PROJECT POPUP */
