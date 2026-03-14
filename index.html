@@ -1,155 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Allen Shaji Varghese</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allen Shaji Varghese | Portfolio</title>
 
-<style>
-
-body{
-    margin:0;
-    font-family:Segoe UI, Arial, sans-serif;
-    background:linear-gradient(135deg,#1f2c3a,#2e4053);
-    color:#F4F6F7;
-}
-
-.container{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    padding:50px 20px;
-}
-
-h1{
-    font-size:40px;
-    margin-bottom:5px;
-}
-
-h3{
-    color:#BDC3C7;
-    margin-top:0;
-}
-
-.profile img{
-    width:180px;
-    border-radius:50%;
-    border:5px solid white;
-    margin-top:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-.section{
-    margin-top:40px;
-    padding:30px;
-    background:#34495E;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-    transition:0.3s;
-}
-
-.section:hover{
-    transform:translateY(-6px);
-}
-
-.section h2{
-    margin-top:0;
-    color:#5DADE2;
-}
-
-/* skills styling */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-}
-
-.skill{
-    background:#5DADE2;
-    padding:8px 15px;
-    border-radius:20px;
-    font-size:14px;
-    color:white;
-}
-
-/* contact links */
-
-.contact a{
-    display:block;
-    margin:10px 0;
-    color:#AED6F1;
-    text-decoration:none;
-    font-size:16px;
-}
-
-.contact a:hover{
-    color:white;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
 
-<h1>Allen Shaji Varghese</h1>
-<h3>Student | Aspiring Software Developer</h3>
+<canvas id="bg"></canvas>
 
-<div class="profile">
-<img src="Allen_Photo_New.jpeg" alt="Allen Shaji Varghese">
-</div>
+<nav>
+<h2>Allen Shaji Varghese</h2>
 
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-<div class="section">
-<h2>About Me</h2>
-<p>
-Hi! I am Allen, a student passionate about programming and software development. 
-I enjoy building projects and learning new technologies to improve my problem-solving skills and become a better developer.
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div>
+
+<img src="assets/images/profile.jpg" class="profile">
+
+<h1>Hi, I'm <span>Allen Shaji Varghese</span></h1>
+
+<p>Computer Science Student | Software Developer | Problem Solver</p>
+
+<p class="hero-links">
+<a href="https://github.com/Allen-SV" target="_blank">GitHub</a>
+|
+<a href="https://www.linkedin.com/in/allen-shaji-varghese-462086332" target="_blank">LinkedIn</a>
 </p>
+
 </div>
 
+</div>
 
-<div class="section">
-<h2>Skills</h2>
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p class="about">
+I am a passionate Computer Science student who enjoys building software that solves real problems.
+I have experience with Java, Python, C programming, and web development. I enjoy working on innovative
+projects and continuously improving my technical skills.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
 
 <div class="skills">
-<span class="skill">Java</span>
-<span class="skill">Python</span>
-<span class="skill">C</span>
-<span class="skill">Object-Oriented Programming</span>
-<span class="skill">Data Structures</span>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">Git</span>
-<span class="skill">GitHub</span>
+
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">C Programming</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">Git</div>
+<div class="skill">Problem Solving</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card" onclick="openProject('matrix')">
+<h3>MatrixOS File Sorter</h3>
+
+<p>
+MatrixOS File Sorter is a desktop utility designed to automatically organize files into categorized folders, helping users keep their system clean and structured.
+</p>
+
+</div>
+
+<div class="project-card" onclick="openProject('ai')">
+<h3>AI Road Safety System</h3>
+
+<p>
+An AI-powered traffic monitoring system that uses computer vision to detect traffic violations, road hazards, and accidents in real time using existing CCTV cameras.
+</p>
+
 </div>
 
 </div>
 
+</section>
 
-<div class="section contact">
-<h2>Contact</h2>
+<!-- PROJECTS POPUP -->
 
-<a href="mailto:allenshajivarghese500@gmail.com">
-📧 allenshajivarghese500@gmail.com
+<div id="project-popup" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closeProject()">&times;</span>
+<h2 id="popup-title"></h2>
+<p id="popup-description"></p>
+</div>
+</div>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-container">
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=allenshajivarghese500@email.com" 
+target="_blank" class="contact-card">
+<h3>Email</h3>
+<p>allenshajivarghese500@email.com</p>
 </a>
 
-<a href="https://github.com/Allen-SV" target="_blank">
-💻 github.com/Allen-SV
+<a href="https://github.com/Allen-SV" target="_blank" class="contact-card">
+<h3>GitHub</h3>
+<p>github.com/Allen-SV</p>
 </a>
 
-<a href="https://linkedin.com/in/allen-shaji-varghese-462086332" target="_blank">
-🔗 linkedin.com/in/allen-shaji-varghese
+<a href="https://www.linkedin.com/in/allen-shaji-varghese-462086332" target="_blank" class="contact-card">
+<h3>LinkedIn</h3>
+<p>linkedin.com/in/allen-shaji-varghese-462086332</p>
 </a>
 
 </div>
 
+</section>
 
-</div>
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Allen Shaji Varghese</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 
